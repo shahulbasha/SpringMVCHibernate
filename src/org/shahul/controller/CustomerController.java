@@ -36,7 +36,7 @@ public class CustomerController {
 	@PostMapping("/processForm")
 	public String saveCustomer(@ModelAttribute Customer customer) {
 		customerService.saveCustomer(customer);
-		return "listCustomers";
+		return "redirect:/customer/list";
 	}
 	
 	@GetMapping("/showFormForUpdate")
